@@ -25,7 +25,7 @@ const graph = game.getGraph()
 
 const Vaskasia = new VaskasiaSettlement(3)
 const Brookhollow = new BrookhollowSettlement(3)
-const Envenmoor = new EvenmoorSettlement(3)
+const Evenmoor = new EvenmoorSettlement(3)
 const Terbisia = new TerbisiaSettlement(3)
 const Tylburne = new TylburneSettlement(3)
 const Jandelle = new JandelleSettlement(3)
@@ -39,7 +39,7 @@ const Pinara = new PinaraSettlement(3)
 graph.addNodes(
   Vaskasia,
   Brookhollow,
-  Envenmoor,
+  Evenmoor,
   Terbisia,
   Tylburne,
   Jandelle,
@@ -51,8 +51,8 @@ graph.addNodes(
   Pinara,
 )
 
-graph.addEdges(Vaskasia, [Brookhollow, Envenmoor])
-graph.addEdges(Brookhollow, [Terbisia, Tylburne, Envenmoor])
+graph.addEdges(Vaskasia, [Brookhollow, Evenmoor])
+graph.addEdges(Brookhollow, [Terbisia, Tylburne, Evenmoor])
 graph.addEdges(Tylburne, [Jandelle, TheGreatCityOfDemacia])
 graph.addEdges(TheGreatCityOfDemacia, [HighSilvermere])
 graph.addEdges(Jandelle, [HighSilvermere, Cloudfield, Meltridge])
@@ -67,4 +67,4 @@ Vaskasia.addStructure(
   new FarmStructure(1),
 )
 
-console.log(game.calculateTotalRessourcePerTurn())
+export { game, graph }

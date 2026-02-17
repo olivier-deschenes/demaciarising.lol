@@ -72,6 +72,10 @@ export abstract class Settlement {
     return this.maxStructuresCount;
   }
 
+  public getStructures(): ReadonlyArray<Structure> {
+    return this.structures;
+  }
+
   public toString(): string {
     return `Settlement: ${this.name}, Level: ${this.level}, Max Structures: ${this.maxStructuresCount}`;
   }
